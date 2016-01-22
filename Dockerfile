@@ -29,7 +29,7 @@ RUN cd /opt && tar xzvf ./android-sdk_r24.4.1-linux.tgz
 ENV ANDROID_HOME /opt/android-sdk-linux/
 ENV PATH $ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 RUN echo $PATH
-RUN echo "y" | android update sdk --no-ui
+RUN echo "y" | android update sdk --no-ui --filter android-21,build-tools-21.1.2
 RUN chmod -R 755 $ANDROID_HOME
 
 # For ADB
