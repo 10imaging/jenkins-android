@@ -32,12 +32,6 @@ RUN echo $PATH
 RUN echo "y" | android update sdk --no-ui --filter android-21,build-tools-21.1.2
 RUN chmod -R 755 $ANDROID_HOME
 
-# For ADB
-RUN apt-get install libc6:i386 libstdc++6:i386
-
-# For aapt
-RUN apt-get install zlib1g:i386
-
 # Add git
 RUN apt-get install -y git-core
 
