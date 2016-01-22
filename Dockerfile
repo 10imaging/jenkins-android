@@ -13,7 +13,7 @@ RUN echo "debconf shared/accepted-oracle-license-v1-1 select true" | /usr/bin/de
 RUN echo "debconf shared/accepted-oracle-license-v1-1 seen true" | /usr/bin/debconf-set-selections
 
 # Add oracle-jdk8 to repositories
-RUN apt-get install python-software-properties -y
+RUN apt-get install software-properties-common python-software-properties -y
 RUN add-apt-repository ppa:webupd8team/java
 RUN apt-get update -y
 RUN apt-get install oracle-java8-installer -y
