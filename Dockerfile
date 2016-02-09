@@ -35,6 +35,9 @@ RUN chmod -R 755 $ANDROID_HOME
 # Add git
 RUN apt-get install -y git-core
 
+# Add cmake
+RUN apt-get install -y cmake
+
 # Add Jenkins
 RUN wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
 RUN echo "deb http://pkg.jenkins-ci.org/debian-stable binary/" >> /etc/apt/sources.list
