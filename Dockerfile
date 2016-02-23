@@ -22,7 +22,8 @@ ENV JAVA_HOME /usr/bin/java
 ENV PATH $JAVA_HOME:$PATH
 
 # Add git and cmake
-RUN apt-get install -y git-core cmake
+RUN apt-get install -y git-core
+RUN apt-get install -y cmake
 
 # Add Android SDK
 RUN wget --progress=dot:giga http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
