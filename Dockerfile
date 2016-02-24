@@ -36,10 +36,10 @@ RUN echo "y" | android update sdk --no-ui --filter android-21,build-tools-21.1.2
 RUN chmod -R 755 $ANDROID_HOME
 
 # Add Android NDK
-#ENV ANDROID_NDK_REVISION 10e
-#RUN mkdir /opt/android-ndk-tmp && cd /opt/android-ndk-tmp
-#RUN wget -q http://dl.google.com/android/ndk/android-ndk-r10e-linux-x86_64.bin
-#RUN chmod a+x ./android-ndk-r10e-linux-x86_64.bin
+ENV ANDROID_NDK_REVISION 10e
+RUN mkdir -p /opt/android-ndk-tmp && cd /opt/android-ndk-tmp
+RUN wget -q http://dl.google.com/android/ndk/android-ndk-r10e-linux-x86_64.bin
+RUN chmod a+x ./android-ndk-r10e-linux-x86_64.bin
 #RUN ./android-ndk-r10e-linux-x86_64.bin
 #RUN mv ./android-ndk-r10e /opt/android-ndk
 #RUN cd /opt && rm -rf /opt/android-ndk-tmp
